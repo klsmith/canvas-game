@@ -8,15 +8,15 @@ const node_modules = `${root}/node_modules`;
 
 
 // Source
-const src = `${root}/src/`;
-const elmSrc = `${src}/elm/`;
-const webSrc = `${src}/web/`;
+const src = `${root}/src`;
+const elmSrc = `${src}/elm`;
+const webSrc = `${src}/web`;
 
 
 // Target
-const target = `${root}/target/`;
+const target = `${root}/target`;
 const tempTarget = `${target}/temp`;
-const appTarget = `${target}/app/`;
+const appTarget = `${target}/app`;
 
 
 // Create TEMP and APP if they don't exist
@@ -34,7 +34,7 @@ sh.exec(`elm make ${elmSrc}/Main.elm --output=${tempTarget}/elm.js`);
 
 
 // Copy TEMP to APP
-sh.mv('-f', `${tempTarget}/*`, appTarget);
+sh.mv('-f', `${tempTarget}/*`, `${appTarget}/`);
 
 
 // Delete TEMP

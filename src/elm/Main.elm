@@ -78,7 +78,7 @@ view model =
             480
     in
     Html.div []
-        [ Html.div [] [ Html.text "Hello World 4" ]
+        [ Html.div [] [ Html.text "Hello World 5" ]
         , Canvas.toHtml ( 640, 480 )
             []
             [ shapes [ fill Color.white ] [ rect ( 0, 0 ) width height ]
